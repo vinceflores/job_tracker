@@ -1,0 +1,24 @@
+.form-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap: 0.5rem;
+}
+.form-h1{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* container class for the app  */
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+

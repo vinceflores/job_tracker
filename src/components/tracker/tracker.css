@@ -1,0 +1,7 @@
+.cell-wrap-text {
+  white-space: pre-line;
+}
+
+.cell-wrap-text {
+  text-wrap: break-word;
+}

@@ -1,0 +1,28 @@
+/* navbar container which is floating at the top of the page*/
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  /* border: #000 solid 1px; */
+}
+
+/* nav-links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.3rem;
+}
+
+.logo{
+    display: flex ; 
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+}
