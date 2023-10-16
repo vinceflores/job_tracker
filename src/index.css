@@ -8,3 +8,41 @@ body{
   box-sizing: border-box;
   width: 100%;
 }
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+@media screen and (min-width: 855px ) and (max-width: 1019px) {
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('./Assets/app_light.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    height: 89vh;
+  }
+}
+
+.hero_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  gap:0.5rem; 
+}
+
+
+.app-light{
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 1rem;
+}
