@@ -11,7 +11,7 @@ import SelfImprovementRoundedIcon from "@mui/icons-material/SelfImprovementRound
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { faMedium } from "@fortawesome/free-brands-svg-icons";
-import CoffeeIcon from '@mui/icons-material/Coffee';
+import CoffeeIcon from "@mui/icons-material/Coffee";
 const socials = [
   {
     name: "LinkedIn",
@@ -43,28 +43,30 @@ const socials = [
 const Footer = () => {
   return (
     <>
-      <Typography
-        variant="h6"
-        noWrap
-        component="a"
-        href="#app-bar-with-responsive-menu"
-        sx={{
-          mr: 2,
-          display: { md: "flex" },
-          fontFamily: "monospace",
-          fontWeight: 700,
-          letterSpacing: ".3rem",
-          color: "inherit",
-          textDecoration: "none",
-        }}
-        className="text-center w-full"
-      >
-        JobTracker
-      </Typography>
-
-      <Box className="w-full h-[50vh  ] item-start gap-4 justify-start flex  flex-col-reverse md:flex-row  p-4 py-5 ">
+      <Box className="w-full h-[400px] item-start gap-4 justify-center flex  flex-col-reverse md:flex-row  p-4 py-5 ">
         {/* Socials */}
+
         <div className="flex  flex-col justify-start">
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { md: "flex" },
+              textAlign: "center",
+              pl:2, 
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+            className="text-center w-full"
+          >
+            JobTracker
+          </Typography>
           <div className="flex  flex-col justify-start">
             <div className="flex  rounded">
               {/* socials */}
@@ -79,7 +81,7 @@ const Footer = () => {
           </div>
 
           {/* Some text of encouragement  */}
-          <div className="flex flex-col gap-2   justify-start  items-start">
+          <div className="flex flex-col gap-2 p-4   justify-start  items-start">
             <Link
               to={"https://www.buymeacoffee.com/vinceflroes"}
               className="w-full"
@@ -88,7 +90,7 @@ const Footer = () => {
                 variant="contained"
                 color="primary"
                 startIcon={<CoffeeIcon />}
-                className="max-sm:w-full"
+                className="max-md:w-full"
               >
                 Buy me a coffee
               </Button>
@@ -97,7 +99,8 @@ const Footer = () => {
         </div>
 
         {/* Some text of encouragement  */}
-        <div className="flex flex-col gap-2  justify-start  items-start ">
+        <div className="flex flex-col gap-2 md:w-1/2  justify-start  items-start ">
+          <h1>Motivation</h1>
           <Typography
             sx={{
               color: grey[600],
