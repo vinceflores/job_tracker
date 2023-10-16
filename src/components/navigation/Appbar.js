@@ -19,6 +19,7 @@ import { NavButton } from "./NavButton";
 import { auth } from "../../controller/firebase";
 import { useTheme } from "@emotion/react";
 import { NavIconButton } from "./NavIconButton";
+import { useMediaQuery } from "@mui/material";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Home", "Account"];
@@ -26,9 +27,10 @@ const user = ["Login", "Sign Up", "Logout"];
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const { authState, authDispatch } = useContext(AuthenticationContext);
+
   const location = useLocation();
   const theme = useTheme();
+  const matches = useMediaQuery("(max-width:897px)");
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -177,8 +179,15 @@ function ResponsiveAppBar() {
               </>
             ) : (
               <div className="flex gap-3">
-                <NavButton to="/login" label="Login" dispatch_type="LOGIN" />
-                <NavButton to="/signup" label="Sign up" dispatch_type="LOGIN" />
+                {
+                  !matches ?  (
+                    <>
+                      <NavButton to="/login" label="Login" dispatch_type="LOGIN" />
+                      <NavButton to="/signup" label="Sign up" dispatch_type="LOGIN" />
+                    </>
+                  ): ""
+                }
+       
               </div>
             )}
           </Box>

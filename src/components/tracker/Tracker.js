@@ -90,7 +90,7 @@ const Tracker = () => {
           bgcolor: theme.palette.background.default,
         }}
         className="mx-auto  flex-grow"
-      >w
+      >
         {matches ? (
           <>
             <MobileAcordian column={columns} />
