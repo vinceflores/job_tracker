@@ -45,6 +45,7 @@ export const usePopSignIn = ({ provider }) => {
         const errorMessage = error.message;
         const email = error.email;
         const credential = GoogleAuthProvider.credentialFromError(error);
+        console.log(error)
       });
   };
 
