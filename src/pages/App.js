@@ -13,10 +13,8 @@ function App() {
         bgcolor: theme.palette.background.default,
         height: "100vh",
       }}
-      className=" "
     >
       <ResponsiveAppBar />
-      {/* <Navbar /> */}
       <Tracker />
     </Box>
   );

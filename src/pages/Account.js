@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
 import { useContext } from "react";
 import { AuthenticationContext } from "../controller/AuthContext";
 import { auth } from "../controller/firebase";
-import Navbar from "../components/navigation/Navbar";
-import { Typography, Stack } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Item } from "../components/accounts & settings/Item";
 import { ControlledSwitches } from "../components/accounts & settings/ControlledSwitches";
 import ItemContainer from "../components/accounts & settings/ItemContainer";
@@ -13,9 +11,6 @@ import { useTheme } from "@emotion/react";
 import AppBar from "../components/navigation/Appbar";
 
 const Account = () => {
-  const { authState, authDispatch, colorMode } = useContext(
-    AuthenticationContext
-  );
   const theme = useTheme();
   return (
     <Box
@@ -25,7 +20,6 @@ const Account = () => {
         height: "100vh",
       }}
     >
-
       <AppBar />
       <Box
         sx={{
