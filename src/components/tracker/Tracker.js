@@ -1,17 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AuthenticationContext } from "../../controller/AuthContext";
 import { auth, db } from "../../controller/firebase";
-import {
-  collection,
-  doc,
-  endAt,
-  getDocs,
-  limit,
-  orderBy,
-  query,
-} from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { DataGrid } from "@mui/x-data-grid";
-import { FormControl, Typography, useMediaQuery } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 import BasicModal from "./AddAppModal";
 import DeletePopUpModal from "./DeletePopUpModal";
 import { columns } from "../../model/tables";
@@ -19,20 +11,12 @@ import "./tracker.css";
 import { useTheme } from "@emotion/react";
 import { Box } from "@mui/system";
 import MobileAcordian from "./MovileAcordian";
-import { CheckBox } from "@mui/icons-material";
 
 const Tracker = () => {
-  const { authState, authDispatch, colorMode } = useContext(
-    AuthenticationContext
-  );
+  const { authState, authDispatch } = useContext(AuthenticationContext);
   const matches = useMediaQuery("(max-width:1160px)");
-  const [checked, setChecked] = useState(false);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
   const theme = useTheme();
-
+  
   useEffect(() => {
     if (auth.currentUser) {
       const user = auth.currentUser;
@@ -58,7 +42,7 @@ const Tracker = () => {
       sx={{
         bgcolor: theme.palette.background.default,
       }}
-      className="p-4   w-full flex flex-col "
+      className="p-4 w-full flex flex-col "
     >
       {/* Action tabs / buttons   */}
       <Box
