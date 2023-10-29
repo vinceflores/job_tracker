@@ -1,1 +1,0 @@
-databse_password = 7TbL4SUhMgk9euF4
